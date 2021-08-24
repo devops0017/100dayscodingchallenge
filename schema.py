@@ -11,7 +11,7 @@ class Employee:
                          {'first': self.first_name, 'last': self.last_name, 'salary': self.salary})
 
     def get_employee(self):
-        self.sql.execute("SELECT * FROM employees WHERE last='sareen'")
+        self.sql.execute("SELECT * FROM employees")
         return self.sql.fetchall()
 
     def del_employee(self):
