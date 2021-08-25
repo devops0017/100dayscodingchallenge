@@ -14,10 +14,6 @@ class Employee:
     def get_employee(c,name):
         c.execute("SELECT * FROM employees WHERE first='{}'".format(name))
         return c.fetchall()
-    #
-    # def get_employee(c):
-    #     c.execute("SELECT * FROM employees")
-    #     return c.fetchall()
 
     def del_employee(self):
         pass
