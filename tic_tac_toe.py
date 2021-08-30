@@ -13,9 +13,8 @@ def print_pattern(dict):
 def restart_game(restart):
     if restart == 'y':
         total_slots = 9
-        print_pattern(blank_dict)
-        global data_store
-        data_store = {}
+        data_store.clear()
+        print_pattern(data_store)
         return True
     else:
         sys.exit(1)
@@ -23,7 +22,6 @@ def restart_game(restart):
 
 users = ['x','o']
 data_store = {}
-blank_dict = {}
 
 print_pattern(data_store)
 
