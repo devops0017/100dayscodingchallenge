@@ -46,19 +46,7 @@ def get_specific_recipe(recipe_id):
     for recipe in recipes:
         if recipe_id == recipe['id']:
             return jsonify(recipe)
-        else:
-            return jsonify({'message': 'recipe not found'}), HTTPStatus.NOT_FOUND
-
-# @app.route('/recipes/<int:recipe_id>', methods=['GET'])
-# def get_s_recipe(recipe_id):
-#     recipe = next((recipe for recipe in recipes if recipe['id'] == recipe_id), None)
-#
-#     if recipe:
-#         return jsonify(recipe)
-#
-#     return jsonify({'message': 'recipe not found'}), HTTPStatus.NOT_FOUND
-
-
+    return jsonify({'message': 'recipe not found'}), HTTPStatus.NOT_FOUND
 
 
 if __name__ == '__main__':
